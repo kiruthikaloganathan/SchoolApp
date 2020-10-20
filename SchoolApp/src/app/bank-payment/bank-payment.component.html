@@ -1,0 +1,79 @@
+<h3 class="text-center">BANK PAYMENT LIST</h3>
+<div class="container">
+<div class="row" my-4>
+    <div class="form-group col-md-3">
+        <label>Student Name</label>
+        <input type="text" #sname class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label>Fees Type</label>
+        <select #ftype class="form-control">
+            <option *ngFor="let fees of feestype">{{fees.Fees}}</option>
+        </select>
+    </div>
+    <div class="form-group col-md-3">
+        <label>Date</label>
+        <input type="date" #date class="form-control">
+    </div>
+    <div class="form-group col-md-3">
+        <label>Amount</label>
+        <input type="number" #amount class="form-control">
+    </div>
+
+</div>
+<div class="row">
+    <div class="form-group col-md-4">
+        <label>Slip</label>
+        <input type="text" #slip class="form-control" value="View">
+    </div>
+    <div class="form-group col-md-4">
+        <label>Status</label>
+        <input type="text" #status class="form-control">
+    </div>
+    <div class="form-group col-md-4">
+        <label>Actions</label>
+        <input type="text" #actions class="form-control">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-md-2 offset-md-5">
+        <button (click)="myFunction(sname,ftype,date,amount,slip,status,actions)" class="form-control">Save</button>
+    </div>
+     <h1>{{HeaderContent}}</h1> 
+    <!-- <h1 [(ngModel)]="HeaderContent"></h1> -->
+    <label>binding: {{dob | date:'dd-MM-yyyy h:mm:ss'}}</label>
+    <div class="form-group col-md-2">
+        <button class="form-control" (click)="reverseFunction(sname,ftype,date,amount,slip,status,actions)">Reverse</button>
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="thead-light text-center">
+            <tr>
+                <th>REGISTERED DATE</th>
+                <th>STUDENT NAME</th>
+                <th>FEES TYPE</th>
+                <th>DATE</th>
+                <th>AMOUNT</th>
+                <th>NOTE</th>
+                <th>SLIP</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bank of feesarray" class="text-center">
+                <td>{{bank.registereddate |date:'dd-MM-yyyy h:mm:ss'}}</td>
+                <td>{{bank.studentname}}</td>
+                <td>{{bank.feestype}}</td>
+                <td>{{bank.date}}</td>
+                <td>{{bank.amount}}</td>
+                <td>{{bank.note}}</td>
+                <td>{{bank.slip}}</td>
+                <td>{{bank.status}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</div>

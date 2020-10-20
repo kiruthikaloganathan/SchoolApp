@@ -1,0 +1,57 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h3>LEAVE TYPE</h3>
+<form [formGroup]="LeaveType">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="name" class="bmd-label-floating">TYPE NAME</label>
+                    <input type="text" formControlName="name" class="form-control">
+
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="days" class="bmd-label-floating">TOTAL DAYS</label>
+                    <input type="number" formControlName="days" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <input type="submit" (click)="SaveLeave()" class="btn btn-grad" value="SAVE TYPE">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <input type="submit" (click)="SearchLeave()" class="btn btn-grad" value="SEARCH">
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="table responsive">
+            <h3>LEAVE TYPE LIST</h3>
+            <table class="table table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>TOTAL DAYS</th>
+                        <th>CREATED AT</th>
+                        <th>CREATED BY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let leave of Leave" class="text-center">
+                        <td>{{leave.TypeName}}</td>
+                        <td>{{leave.TotalNumber}}</td>
+                        <td>{{leave.CreatedAt| date: 'dd-MM-yyyy'}}</td>
+                        <td>{{leave.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

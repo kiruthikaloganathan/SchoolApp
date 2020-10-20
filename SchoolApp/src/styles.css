@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* @font-face {
+    font-family: Roboto;
+    srcc: url(assets/fonts/Roboto/Roboto-Light.ttf) format("opentype");
+} */
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    /* background-image: url("assets/img/bgimg.jpg") !important; */
+    /* background-image: linear-gradient(to right, #5f2c82 0%, #49a09d 51%, #5f2c82 100%); */
+    /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); */
+}

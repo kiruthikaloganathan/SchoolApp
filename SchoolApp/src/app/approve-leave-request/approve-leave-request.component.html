@@ -1,0 +1,45 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form [formGroup]="ApproveLeaveRequest">
+    <div class="container">
+        <h3>APPROVE LEAVE REQUEST</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="search" class="bmd-label-floating">SEARCH</label>
+                    <input type="text" class="form-control" formControlName="search">
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-grad" (click)="ApproveleaveSearch()" value="SEARCH">
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-grad" (click)="ApproveleaveSave()" value="SAVE">
+                </fieldset>
+            </div>
+        </div>
+        <h3>APPROVE LEAVE REQUEST</h3>
+        <div class="table responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>NAME</th>
+                        <th>TYPE</th>
+                        <th>CREATED AT</th>
+                        <th>CREATED BY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let leaverequest of LeaveRequest" class="text-center">
+                        <td>{{leaverequest.Name}}</td>
+                        <td>{{leaverequest.Type}}</td>
+                        <td>{{leaverequest.CreatedAt}}</td>
+                        <td>{{leaverequest.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

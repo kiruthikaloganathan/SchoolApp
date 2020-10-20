@@ -1,0 +1,61 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h1>FEES MASTER LIST</h1>
+<div class="container">
+    <div class="row">
+        <div class="form-group col-md-3">
+            <fieldset class="form-group">
+                <label for="firstname" class="bmd-label-floating">FEES TYPE</label>
+                <select type="text" #ftype class="form-control">
+                    <option *ngFor="let feest of feestype">{{feest.feesname}}</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="form-group col-md-3">
+            <fieldset class="form-group">
+                <label for="date" class="bmd-label-floating">DATE</label>
+                <input type="date" #date class="form-control" id="date">
+
+            </fieldset>
+
+        </div>
+        <div class="form-group col-md-2">
+            <fieldset class="form-group">
+                <label for="amount" class="bmd-label-floating">AMOUNT</label>
+                <input type="input" #amount class="form-control" id="amount">
+
+            </fieldset>
+        </div>
+
+        <div class="form-group col-md-2">
+            <button (click)=myFunction(ftype,date,amount) class="btn btn-grad">SAVE MASTER</button>
+        </div>
+        <div class="form-group col-md-2">
+            <button class="btn btn-grad" (click)="reverseFunction()">Reverse</button>
+        </div>
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-light text-center">
+                <tr>
+                    <th>GROUP</th>
+                    <th>TYPE</th>
+                    <th>AMOUNT</th>
+                    <th>PAYMENT DATE</th>
+                    <th>CREATED AT</th>
+                    <th>CREATED BY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let fmaster of student" class="text-center">
+                    <td>{{fmaster.group}}</td>
+                    <td>{{fmaster.type}}</td>
+                    <td>{{fmaster.amount}}</td>
+                    <td>{{fmaster.paymentdate | date: 'MMM-yyyy-dd h:mm:ss'}}</td>
+                    <td>{{fmaster.CreatedAt}}</td>
+                    <td>{{fmaster.CreatedBy}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

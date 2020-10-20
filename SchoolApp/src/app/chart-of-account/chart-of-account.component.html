@@ -1,0 +1,57 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form [formGroup]="ChartofAccount">
+    <div class="row">
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <label for="head" class="bmd-label-floating">HEAD</label>
+                <input type="text" formControlName="head" class="form-control" id="head">
+
+            </fieldset>
+        </div>
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <label for="type" class="bmd-label-floating">TYPE</label>
+                <select formControlName="type" class="form-control" id="type">
+                    <option *ngFor="let type of Accounttype" [ngValue]="type.TypeName">
+                        {{type.TypeName}}</option>
+                </select>
+            </fieldset>
+        </div>
+
+        <div class="col-md-3">
+            <fieldset class="form-group">
+
+                <input type="submit" (click)="myFunction()" class="btn btn-grad"
+                    value="SAVE HEAD">
+
+
+            </fieldset>
+        </div>
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <input type="submit" (click)="Search()" class="btn btn-grad" value="SEARCH">
+            </fieldset>
+        </div>
+    </div>
+</form>
+<h3>CHART OF ACCOUNT LIST</h3>
+<div class="table responsive">
+    <table class="table table-bordered">
+        <thead class="thead-light text-center">
+            <tr>
+                <th>CREATEAT</th>
+                <th>NAME</th>
+                <th>TYPE</th>
+                <th>CREATEBY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of AccountChart" class="text-center">
+                <td>{{account.CreatedAt |date : 'dd-MM-yyyy'}}</td>
+                <td>{{account.Name |titlecase}}</td>
+                <td>{{account.Type | lowercase}}</td>
+                <td>{{account.CreatedBy}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

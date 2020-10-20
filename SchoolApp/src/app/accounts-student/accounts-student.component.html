@@ -1,0 +1,93 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<div class="col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header card-header-tabs card-header-primary">
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#chartofaccount" tabindex="0"
+                                aria-disabled="false">
+                                <i class="w-fasme fas fa-user-graduate"></i>CHART OF ACCOUNT
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#bankaccount" mat-button=""
+                                tabindex="1" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> BANK ACCOUNT
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#addincome" mat-button=""
+                                tabindex="2" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> ADD INCOME
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#profit" mat-button="" tabindex="3"
+                                aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> PROFIT
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#addexpense" mat-button=""
+                                tabindex="4" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> ADD EXPENSE
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#search" mat-button="" tabindex="5"
+                                aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> SEARCH
+
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="chartofaccount">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-chart-of-account></app-chart-of-account>
+                    </div>
+                </div>
+                <div class="tab-pane" id="bankaccount">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-bank-account></app-bank-account>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="addincome">
+                    <div class="card two bg-white px-4 py-4 mb-3">
+                        <app-add-income></app-add-income>
+                    </div>
+                </div>
+                <div class="tab-pane" id="profit">
+                    <div class="card two bg-white px-4 py-4 mb-3">
+                        <app-profit></app-profit>
+                    </div>
+                </div>
+                <div class="tab-pane" id="addexpense">
+                    <div class="card two bg-white px-4 py-4 mb-3">
+                        <app-addexpense></app-addexpense>
+                    </div>
+                </div>
+                <div class="tab-pane" id="search">
+                    <div class="card two bg-white px-4 py-4 mb-3">
+                       <app-search></app-search>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

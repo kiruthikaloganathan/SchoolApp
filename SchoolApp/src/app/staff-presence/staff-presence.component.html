@@ -1,0 +1,28 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form [formGroup]="StaffPresence">
+    <div class="container">
+        <h3>STAFF PRESENCE</h3>
+        <div class="row">
+            <div class="col-md-2">
+                <fieldset class="form-group">
+                    <label for="role" class="bmd-label-floating">SELECT A ROLE</label>
+                    <select type="text" class="form-control" formControlName="role">
+                        <option *ngFor="let Role of ROLE" [ngValue]="Role.RoleName">{{Role.RoleName}}</option>
+                        
+                    </select>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <label for="date" class="bmd-label-floating">PRESENCE DATE</label>
+                    <input type="date" class="form-control" formControlName="date">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <input type="submit" (click)="myFunction()" class="btn btn-grad" value="save">
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</form>

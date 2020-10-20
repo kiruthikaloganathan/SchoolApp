@@ -1,0 +1,42 @@
+
+<form>
+    <div class="container">
+
+    <div class="row">
+        <div class="form-group col-md-8">
+            <label>NAME</label>
+            <input type="text" #text class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label>STUDENT ID</label>
+            <input type="number" #studentid class="form-control">
+        </div>
+    </div>
+        <div class="row">
+        <div class="form-group col-md-4">
+            <button (click)="myFunction(text,studentid)" class="form-control">save</button>
+        </div>
+    </div>
+
+    <div class="table responsive">
+        <table class="table table-bordered">
+            <thead class="text-center thead-light">
+                <tr>
+                    <th>NAME</th>
+                    <th>STUDENT ID</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let account of array" class="text-center">
+                <td>{{account.name}}</td>
+                <td>{{account.studentid}}</td>
+                
+            </tr>
+        </tbody>
+            
+        </table>
+    </div>
+</div>
+</form>

@@ -1,0 +1,107 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<!-- <form>
+    <div class="container">
+        <h3 class="text-center">ADD EXPENSE</h3>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>NAME</label>
+                <input type="text" #name class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>A/C HEAD</label>
+                <input type="text" #head class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>PAYMENT METHOD</label>
+                <input type="text" #payment class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>DATE</label>
+                <input type="date" #date class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>AMOUNT</label>
+                <input type="number" #amount class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <button (click)="myFunction(name,head,payment,date,amount)" class="form-control">BROWSE</button>
+            </div>
+        </div> -->
+        <form>
+            <div class="row">
+                <div class="col-md-2">
+                    <fieldset class="form-group">
+                        <label for="name" class="btn-label-floating">NAME</label>
+                        <input type="text" #name class="form-control" id="name">
+                    </fieldset>
+                </div>
+                <div class="col-md-2">
+                    <fieldset class="form-group">
+                        <label for="head" class="btn-label-floating">A/C HEAD</label>
+                        <input type="text" #head class="form-control" id="head">
+
+                    </fieldset>
+                </div>
+                <div class="col-md-2">
+                    <fieldset class="form-group">
+                        <label for="payment" class="btn-label-floating">LABEL FLOATING</label>
+                        <input type="text" #payment class="form-control" id="payment">
+                    </fieldset>
+                </div>
+                <div class="col-md-2">
+                    <fieldset class="form-group">
+                        <label for="date" class="btn-label-floating">DATE</label>
+                        <input type="date" #date class="form-control" id="date">
+                    </fieldset>
+                </div>
+                <div class="col-md-2">
+                    <fieldset class="form-group">
+                        <label for="amount" class="btn-label-floating">AMOUNT</label>
+                        <input type="number" #amount class="form-control" id="amount">
+                    </fieldset>
+                </div>
+                <div class="col-md-2">
+                    <fieldset class="form-group">
+                        <input type="submit" class="btn btn-grad" value="BROWSE">
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+<h3 class="text-center">EXPENSE LIST</h3>
+<div class="table responsive">
+    <table class="table table-bordered">
+        <thead class="thead-light text-center">
+            <tr>
+                <th>NAME</th>
+                <th>PAYMENT METHOD</th>
+                <th>DATE</th>
+                <th>A/C HEAD</th>
+                <th>AMOUNT</th>
+                <th>CREATEDAT</th>
+                <th>CREATEDBY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let expense of ExpenseList" class="text-center">
+                <td>{{expense.Name}}</td>
+                <td>{{expense.Payment}}</td>
+                <td>{{expense.Date}}</td>
+                <td>{{expense.Head}}</td>
+                <td>{{expense.Amount}}</td>
+                <td>{{expense.CreatedAt}}</td>
+                <td>{{expense.CreatedBy}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

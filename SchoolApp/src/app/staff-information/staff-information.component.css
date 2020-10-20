@@ -1,0 +1,143 @@
+/* 
+  .floating-label { 
+    position:relative; 
+    margin-bottom:20px; 
+  }
+  .floating-input {
+    font-size:14px;
+    padding:4px 4px;
+    display:block;
+    width:100%;
+    height:30px;
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  
+  .floating-input:focus  {
+       outline:none;
+       border-bottom:2px solid #5264AE; 
+  }
+  
+  label {
+    color:#999; 
+    font-size:14px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:5px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+  } 
+  
+
+  .highlight {
+    position:absolute;
+    height:50%; 
+    width:100%; 
+    top:15%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  
+  
+    */
+/* form{
+
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 500px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: rgb(230, 207, 173);
+    } */
+
+
+
+
+  
+  
+    /* input {
+        margin: 40px 25px;
+        width: 200px;
+        display: block;
+        border: none;
+        padding: 10px 0;
+        border-bottom: solid 1px #bc911a;
+        -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #bc551a 4%);
+        background: linear-gradient(to bottom, #81610a00 96%, #bc631a 4%);
+        background-position: -200px 0;
+        background-size: 200px 100%;
+        background-repeat: no-repeat;
+        color: #53620e;
+      }
+      
+      input:focus, input:valid {
+       box-shadow: grey;
+       outline: none;
+       background-position: 0 0;
+      }
+      
+      
+      input::-webkit-input-placeholder {
+       -webkit-transition: all 0.3s ease-in-out;
+       transition: all 0.3s ease-in-out;
+      }
+      
+      input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+       color: #bc1a1a;
+       font-size: 11px;
+       -webkit-transform: translateY(-8px);
+       transform: translateY(-8px);
+       visibility: visible !important;
+      }
+
+
+
+      select {
+        margin: 40px 25px;
+        width: 200px;
+        display: block;
+        border: none;
+        padding: 10px 0;
+        border-bottom: solid 1px #bc911a;
+        -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #bc551a 4%);
+        background: linear-gradient(to bottom, #81610a00 96%, #bc631a 4%);
+        background-position: -200px 0;
+        background-size: 200px 100%;
+        background-repeat: no-repeat;
+        color: #53620e;
+      }
+      
+      select:focus, input:valid {
+       box-shadow: none;
+       outline: none;
+       background-position: 0 0;
+      }
+      
+      
+      select::-webkit-input-placeholder {
+       -webkit-transition: all 0.3s ease-in-out;
+       transition: all 0.3s ease-in-out;
+      }
+      
+      select:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+       color: #bc1a1a;
+       font-size: 11px;
+       -webkit-transform: translateY(-8px);
+       transform: translateY(-8px);
+       visibility: visible !important;
+      } */

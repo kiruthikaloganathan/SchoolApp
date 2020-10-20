@@ -1,0 +1,119 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+
+<form [formGroup]="BankAccount">
+    <div class="row">
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <label for="accountname" class="bmd-label-floating">ACCOUNT NAME</label>
+                <input type="text" formControlName="accountname" class="form-control"
+                    id="accountname">
+
+            </fieldset>
+        </div>
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <label for="openingbalance" class="bmd-label-floating">OPENING BALANCE</label>
+                <input type="number" formControlName="openingbalance" class="form-control"
+                    id="openingbalance">
+            </fieldset>
+        </div>
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <label for="note" class="bmd-label-floating">NOTE</label>
+                <input type="text" formControlName="note" class="form-control" id="note">
+            </fieldset>
+        </div>
+        <div class="col-md-3">
+            <fieldset class="form-group">
+                <input type="submit" (click)="myBankaccount()" class="btn btn-grad"
+                    value="SAVE ACCOUNT">
+            </fieldset>
+        </div>
+    </div>
+    <h3 class="text-center">ACCOUNT LIST</h3>
+    <h4 class="text-right">Date:{{dob | date:'dd-MMM-yyyy'}}</h4>
+    <div class="table responsive">
+        <table class="table table-bordered">
+            <thead class="text-center thead-light">
+                <tr>
+                    <th>ACCOUNT NAME</th>
+                    <th>OPENING BALANCE</th>
+                    <th>NOTE</th>
+                    <th>CREATEDAT</th>
+                    <th>CREATEDBY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let account of AccountList" class="text-center">
+
+                    <td>{{account.AccountName}}</td>
+                    <td>{{account.OpeningBalance | currency: 'CAD' :'symbol-narrow'}}</td>
+                    <td>{{account.Note}}</td>
+                    <td>{{account.CreatedAt}}</td>
+                    <td>{{account.CreatedabY}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</form>
+<!-- <form >
+    <h3 class="text-center">ADD BANK ACCOUNT</h3>
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-4">
+
+                <input type="text" #accname class="form-control">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>ACCOUNT NAME</label>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <input type=text #balance class="form-control">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>OPENING BALANCE</label>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="form-group col-md-4">
+                
+                <textarea #txtarea class="form-control">NOTE</textarea>
+                
+               
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <button (click)="myFunction(accname,balance,txtarea)" class="form-control">SAVE</button>
+            </div>
+            <div class="form-group col-md-2">
+                <button (click)="nextPage(accname,balance,txtarea)" class="form-control">NEXT PAGE</button>
+            </div>
+        </div>
+        <h3 class="text-center">ACCOUNT LIST</h3>
+        <h4 class="text-right">Date:{{dob | date:'dd-MMM-yyyy'}}</h4>
+        <div class="table responsive">
+            <table class="table table-bordered">
+                <thead class="text-center thead-light">
+                    <tr>
+                        <th>ACCOUNT NAME</th>
+                        <th>OPENING BALANCE</th>
+                        <th>NOTE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let account of AccountList" class="text-center">
+                        <td>{{account.AccountName}}</td>
+                        <td>{{account.OpeningBalance}}</td>
+                        <td>{{account.Note}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</form> -->

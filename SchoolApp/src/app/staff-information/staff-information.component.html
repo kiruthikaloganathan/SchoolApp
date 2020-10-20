@@ -1,0 +1,263 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h2 class="text-center">STAFF INFORMATION</h2>
+<form [formGroup]="StaffInformation">
+    <div class="container">
+        <h4>BASIC INFORMATION</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="staffno" class="bmd-label-floating">STAFF NUMBER</label>
+                    <input type="number" formControlName="staffno" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="role" class="bmd-label-floating">ROLE</label>
+                    <select formControlName="role" class="form-control">
+                        <option *ngFor="let role of Role1">{{role.RoleName}}</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="department" class="bmd-label-floating">DEPARTMENT</label>
+                    <select formControlName="department" class="form-control">
+                        <option *ngFor="let dept of Department">{{dept.DepartmentName}}</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="design" class=bmd-label-floating>DESIGNATION</label>
+                    <input type="text" formControlName="design" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="fn" class="bmd-label-floating">FIRST NAME</label>
+                    <input type="text" formControlName="fn" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="ln" class="bmd-label-floating">LAST NAME</label>
+                    <input type="text" formControlName="ln" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="fan" class="bmd-label-floating">FATHER'S NAME</label>
+                    <input type="text" formControlName="fan" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label fpr="mn" class="bmd-label-floating">MOTHER'S NAME</label>
+                    <input type="text" formControlName="mn" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="email" class="bmd-label-floating">E-MAIL</label>
+                    <input type="email" formControlName="email" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="gender" class="bmd-label-floating">GENDER</label>
+                    <select formControlName="gender" class="form-control">
+                        <option>MALE</option>
+                        <option>FEMALE</option>
+                        <option>OTHER</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="dob" class="bmd-label-floating">DATE OF BIRTH</label>
+                    <input type="date" formControlName="dob" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="dfj" class="bmd-label-floating">DATE OF JOINING</label>
+                    <input type="date" formControlName="dfj" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="mobile" class="bmd-label-floating">MOBILE</label>
+                    <input type="number" formControlName="mobile" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="marital" class="bmd-label-floating">MARITAL STATUS</label>
+                    <input type="text" formControlName="marital" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="en" class="bmd-label-floating">EMERGENCY NUMBER</label>
+                    <input type="number" formControlName="en" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="dl" class="bmd-label-floating">DRIVING LICENSE</label>
+                    <input type="text" formControlName="dl" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="cd" class="bmd-label-floating">CURRENT ADDRESS *</label>
+                    <input type="text" formControlName="cd" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="pa" class="bmd-label-floating">PERMANENT ADDRESS</label>
+                    <input type="text" formControlName="pa" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="form-grroup">
+                    <label for="qualify" class="bmd-label-floating">QUALIFICATION</label>
+                    <input type="text" formControlName="qualify" class="form-control">
+                </fieldset>
+            </div>
+
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="exp" class="bmd-label-floating">EXPERIENCE</label>
+                    <input type="text" formControlName="exp" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <label><strong>PAYROLL DETAILS</strong></label><br><br>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="epf" class="bmd-label-floating"> EPF NO</label>
+                    <input type="text" formControlName="epf" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="salary" class="bmd-label-floating">BASIC SALARY</label>
+                    <input type="text" formControlName="salary" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="contract" class="bmd-label-floating">CONTRACT TYPE</label>
+                    <input type="text" formControlName="contract" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="location" class="bmd-label-floating">LOCATION</label>
+                    <input type="text" formControlName="location" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <label><strong>BANKING INFORMATION</strong></label><br><br>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="baccname" class="bmd-label-floating">BANK ACCOUNT NAME</label>
+                    <input type="text" formControlName="baccname" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="bankname" class="bmd-label-floating">BANK NAME</label>
+                    <input type="text" formControlName="bankname" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="nabranch" class="bmd-label-floating">NAME OF BRANCH</label>
+                    <input type="text" formControlName="nabranch" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <label><strong>SOCIAL LINKS DETAILS</strong></label><br><br>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="facebookurl" class="bmd-label-floating">FACEBOOK URL</label>
+                    <input type="text" formControlName="facebookurl" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="twitter" class="bmd-label-floating">TWITTER URL</label>
+                    <input type="text" formControlName="twitter" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="linkedin" class="bmd-label-floating">LINKEDIN URL</label>
+                    <input type="text" formControlName="linkedin" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="instragram" class="bmd-label-floating">INSTRAGRAM URL</label>
+                    <input type="text" formControlName="instragram" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <label><strong>DOCUMENT INFORMATION</strong></label><br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <label for="documinfo" class="bmd-label-floating">SUMMARY</label>
+                    <input type="text" formControlName="documinfo" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                <label for="joiningle" class="bmd-label-floating">JOINING LETTER</label>
+                <input type="text" formControlName="joiningle" class="form-control">
+            </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <label for="otherdocum" class="bmd-label-floating">OTHERS DOCUMENTS</label>
+                    <input type="text" formControlName="otherdocum" class="form-control">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 offset-md-5">
+                <fieldset class="form-group">
+                    <input type="search" (click)="myFunction()" class="btn btn-grad" value="SAVE PERSONAL">
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</form>

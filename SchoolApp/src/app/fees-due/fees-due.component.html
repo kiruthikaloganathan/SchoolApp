@@ -1,0 +1,48 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h2 class="text-center">FEES DUE</h2>
+<form [formGroup]="FeesDue">
+    <div class="container">
+    <div class="row my-4">
+        <div class="form-group col-md-4 offset-md-4">
+            <fieldset class="form-group">
+                <label for="firstname" class="bmd-label-floating">FEES GROUP</label>
+                <select formControlName="fgroup" class="form-control">
+                    <option *ngFor="let fg of feesgroup" [ngValue]="fg.fname">{{fg.fname}}</option>
+                </select>
+                
+            </fieldset>
+        </div>
+   
+        <div class="form-group col-md-2 offset-md-5">
+            <button #btn (click)="myFunction()" class="btn btn-grad">Save</button>
+        </div>
+        <div class="form-group col-md-2">
+            <button class="btn btn-grad" (click)="reverseFunction()">Reverse</button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="text-center thead-light">
+                <tr>
+                    <th>FEES GROUP</th>
+                    <th>SELECT CLASS</th>
+                    <th>SELECT SECTION</th>
+                    <th>PAYMENT DATE</th>
+                    <th>CREATED AT</th>
+                    <th>CREATED BY</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr *ngFor="let fdu of feesdue" class="text-center">
+                        <td>{{fdu.feesgroup}}</td>
+                        <td>{{fdu.selectclass}}</td>
+                        <td>{{fdu.selectsection}}</td>
+                        <td>{{fdu.paymentdate | date: 'yyyy-MMM-dd h:mm:ss'}}</td>
+                        <td>{{fdu.CreatedAt}}</td>
+                        <td>{{fdu.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+</form>

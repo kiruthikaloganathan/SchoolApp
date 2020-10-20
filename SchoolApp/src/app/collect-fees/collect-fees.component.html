@@ -1,0 +1,65 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h2>COLLECT FEES</h2>
+<form [formGroup]="CollectFees">
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <fieldset class="form-group">
+                    <label for="sclass" class="bmd-label-floating">SELECT CLASS</label>
+                    <select type="text" formControlName="sclass" class="form-control">
+                        <option *ngFor="let section of studentsection"[ngValue]="section.sectionname">{{section.sectionname}}</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="form-group col-md-4">
+                <fieldset class="form-group">
+                    <label for="ssection" class="bmd-label-floating">SELECT SECTION</label>
+                    <select type="text" formControlName="ssection" class="form-control">
+                        <option *ngFor="let section of studentsection"[ngValue]="section.sectionname">{{section.sectionname}}</option>
+                    </select>
+                </fieldset>
+            </div>
+        
+            <div class="form-group col-md-2">
+                <fieldset class="form-group">
+
+                <button (click)="myFunction()" class="btn btn-grad">save</button>
+                </fieldset>
+            </div>
+            <div class="form-group col-md-2">
+                <fieldset class="form-group">
+
+                <button class="btn btn-grad" (click)="reverseFunction()">Reverse</button>
+                </fieldset>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>SEARCH BY NAME</th>
+                        <th>ADMISSION NO</th>
+                        <th>ROLL NO</th>
+                        <th>NATIONAL ID NUMBER</th>
+                        <th>LOCAL ID NUMBER</th>
+                        <th>PAYMENT DATE</th>
+                        <th>CREATED AT</th>
+                        <th>CREATED BY</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr *ngFor="let tab of cfees" class="text-center">
+                            <td>{{tab.searchbyname}}</td>
+                            <td>{{tab.admissionno}}</td>
+                            <td>{{tab.rollno}}</td>
+                            <td>{{tab.nationalidno}}</td>
+                            <td>{{tab.localidnumber}}</td>
+                            <td>{{tab.paymentdate | date: 'dd-yyyy-MMM'}}</td>
+                            <td>{{tab.CreatedAt}}</td>
+                            <td>{{tab.CreatedBy}}</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</form>

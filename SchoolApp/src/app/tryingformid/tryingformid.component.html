@@ -1,0 +1,39 @@
+<form [formGroup]="Tryingformid">
+    <div class="container">
+        <div class="row">
+            <div class=" floating-form col-md-2" style="margin-top:40px">
+                <span>ACADEMIC YEAR</span>
+                <select formControlName="aca" class="floating-input" placeholder="">
+                    <option *ngFor="let acad of academic" [ngValue]="acad.AcademicName">{{acad.AcademicName}}</option>
+                </select>
+
+            </div>
+            <div class="floating-form col-md-2" style="margin-top:40px">
+                <select formControlName="Class" class="floating-input" placeholder="">
+                    <option *ngFor="let cla of selectclass" [ngValue]="cla.Selectname">{{cla.Selectname}}</option>
+                </select>
+                <label>SELECT CLASS</label>
+            </div>
+            <div class="floating-form col-md-2" style="margin-top:40px">
+                <select formControlName="sec" class="floating-input" placeholder="">
+                    <option *ngFor="let sect of section"[ngValue]="sect.Sectionname">{{sect.Sectionname}}</option>
+                </select>
+                <label>SELECT SECTION</label>
+            </div>
+            
+            <div class="floating-form col-md-2">
+                <input type="text" formControlName="rollnum" class="floating-input" placeholder="">
+                <label>SELECT BY ROLL NO</label>
+            </div>
+            <div class="floating-form col-md-2">
+                <input type="text" formControlName="namee" class="floating-input" placeholder="">
+                <label>SELECT BY NAME</label>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="floating-form col-md-2">
+                <input type="button" (click)="onFormSubmit()"  value="submit" >
+            </div>
+        </div>
+    </div>
+</form>

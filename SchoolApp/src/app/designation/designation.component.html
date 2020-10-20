@@ -1,0 +1,45 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form [formGroup]="Designation1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <label for="titledesign" class="bmd-label-floating">TITLE DESIGNATION</label>
+                    <input type="text" formControlName="titledesign" class="form-control">
+                </fieldset>
+
+            </div>
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <input type="submit" (click)="myFunction()" class="btn btn-grad" value="SAVE THE DESIGNATION">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <input type="submit" (click)="Search()" class="btn btn-grad" value="SEARCH">
+                </fieldset>
+            </div>
+        </div>
+        <h3>THE DESIGNATION LIST</h3>
+        <div class="table responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>DESIGNATION</th>
+                        <th>ACTION</th>
+                        <th>CREATED AT</th>
+                        <th>CREATED BY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let design of Designation" class="text-center">
+                        <td>{{design.Designation | titlecase}}</td>
+                        <td>{{design.Action}}</td>
+                        <td>{{design.CreatedAt | date: 'dd-MM-yyyy'}}</td>
+                        <td>{{design.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

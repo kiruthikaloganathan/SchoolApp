@@ -1,0 +1,76 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<div class="container">
+    <form [formGroup]="PendingLeave">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <label for="search" class="bmd-label-floating">SEARCH</label>
+                    <input type="text" class="form-control" formControlName="search">
+                </fieldset>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="applyDate" class="bmd-label-floating">APPLY DATE</label>
+                    <input type="date" class="form-control" formControlName="applyDate">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="leaveType" class="bmd-label-floating">LEAVE TYPE</label>
+                    <input type="text" class="form-control" formControlName="leaveType">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="datefrom" class="bmd-label-floating">DATE FROM</label>
+                    <input type="date" class="form-control" formControlName="datefrom">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="dateTo" class="bmd-label-floating">DATE TO</label>
+                    <input type="date" class="form-control" formControlName="dateTo">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="reason" class="bmd-label-floating">REASON</label>
+                    <input type="text" class="form-control" formControlName="reason">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="file" class="bmd-label-floating">ATTACH FILE</label>
+                    <input type="file" class="form-control" formControlName="file">
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-grad" (click)="PendingLeaveSearch()" value="SEARCH">
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-grad" (click)="PendingLeaveSave()" value="SAVE">
+                </fieldset>
+            </div>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,68 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form>
+    <!-- <div class="container">
+        <h3 class="text-center">SELECT CRITERIA</h3>
+        <div class="row">
+            <div class="form-group col-md-4 offset-md-2">
+                <label>DATE FROM</label>
+                <input type="date" #datefrom class="form-control">
+            </div>
+            <div class="form-group col-md-4 ">
+                <label>DATE TO</label>
+                <input type="date" #dateto class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2 offset-md-5">
+                <button (click)="myFunction(datefrom,dateto)" class="form-control">SEARCH</button>
+            </div>
+        </div> -->
+    <form>
+        <div class="row">
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <label for="datefrom" class="btn-label-floating">DATE FROM</label>
+                    <input type="date" #datefrom class="form-control" id="datefrom">
+                </fieldset>
+
+            </div>
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <label for="dateto" class="btn-label-floating">DATE TO</label>
+                    <input type="date" #dateto class="form-control" id="dateto">
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                <fieldset class="form-group">
+                    <input type="select" class="btn btn-grad" value="SEARCH">
+                </fieldset>
+            </div>
+        </div>
+    </form>
+    <h3 class="text-center">PROFIT</h3>
+    <div class="table responsive">
+        <table class="table table-bordered">
+            <thead class="thead-light text-center">
+                <tr>
+                    <th>TIME</th>
+                    <th>INCOME(S)</th>
+                    <th>EXPENSE(S)</th>
+                    <th>PROFIT(S)</th>
+                    <th>CREATEDAT</th>
+                    <th>CREATEDBY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let profit of Profit" class="text-center">
+                    <td>{{profit.Time}}</td>
+                    <td>{{profit.Income}}</td>
+                    <td>{{profit.Expense}}</td>
+                    <td>{{profit.Profit}}</td>
+                    <td>{{profit.CreatedAt}}</td>
+                    <td>{{profit.CreatedBy}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</form>

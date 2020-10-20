@@ -1,0 +1,39 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form [formGroup]="Department">
+    <h3 class="text-center">ADD DEPARTMENT</h3>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-4">
+                <fieldset class="form-group">
+                <label for="text" class="bmd-label-floating">DEPARTMENT NAME</label>
+                <input type="text" formControlName="text" class="form-control">
+            </fieldset>
+            </div>
+            <div class=" col-md-4">
+                <fieldset class="form-group">
+                <button (click)="myFunction()" class="btn btn-grad">SAVE</button>
+            </fieldset>
+            </div>
+        </div>
+        <div class="table responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>DEPARTMENT</th>
+                        <th>ACTION</th>
+                        <th>CREATEDAT</th>
+                        <th>CREATEDBY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let dept of department" class="text-center">
+                        <td>{{dept.Department |uppercase}}</td>
+                        <td>{{dept.Action}}</td>
+                        <td>{{dept.CreatedAt}}</td>
+                        <td>{{dept.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

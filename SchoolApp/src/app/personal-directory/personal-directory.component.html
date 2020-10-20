@@ -1,0 +1,59 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<form [formGroup]="PersonalDirectory">
+    
+    <div class="container">
+        <h2>PERSONAL LIST</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="role" class="bmd-label-floating">ROLE</label>
+                    <select type="text" class="form-control" formControlName="role">
+                        <option *ngFor="let Role of ROLE" [ngValue]="Role.RoleNumber">{{Role.RoleNumber}}</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="staffid" class="bmd-label-floating">SEARCH BY STAFFID</label>
+                    <input type="text" formControlName="staffid" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-3">
+                <fieldset class="form-group">
+                    <label for="staffname" class="bmd-label-floating">SEARCH BY STAFFNAME</label>
+                    <input type="text" formControlName="staffname" class="form-control">
+                </fieldset>
+            </div>
+            <div class="col-md-2">
+                <fieldset class="form-group">
+                    <input type="submit" (click)="myFunction()" class="btn btn-grad" value="save">
+                </fieldset>
+            </div>
+        </div>
+       <h3>PERSONAL LIST</h3>
+        <div class="table responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th>ROLE</th>
+                        <th>DEPARTMENT</th>
+                        <th>MOBILE</th>
+                        <th>EMAIL</th>
+                        <th>CREATED AT</th>
+                        <th>CREATED BY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let perDirect of PersonalDirect">
+                        <td>{{perDirect.Role}}</td>
+                        <td>{{perDirect.Department}}</td>
+                        <td>{{perDirect.Mobile}}</td>
+                        <td>{{perDirect.Email}}</td>
+                        <td>{{perDirect.CreatedAt | date : 'dd-MM-yyyy'}}</td>
+                        <td>{{perDirect.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

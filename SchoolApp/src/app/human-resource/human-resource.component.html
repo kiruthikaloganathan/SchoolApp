@@ -1,0 +1,91 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<div class="col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header card-header-tabs card-header-primary">
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#designation" tabindex="0"
+                                aria-disabled="false">
+                                <i class="w-fasme fas fa-user-graduate"></i>DESIGNATION
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#departments" mat-button=""
+                                tabindex="1" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i>DEPARTMENTS
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#staffinformation" mat-button=""
+                                tabindex="2" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> STAFF INFORMATION
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#personaldirectory" mat-button=""
+                                tabindex="4" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> PERSONAL DIRECTORY
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#staffpresence" mat-button=""
+                                tabindex="5" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> STAFF PRESENCE
+
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mat-button" data-toggle="tab" href="#staffattendance" mat-button=""
+                                tabindex="5" aria-disabled="false">
+                                <i class="w-fasme fas fa-chalkboard-teacher"></i> STAFF ATTENDANCE
+
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="tab-content">
+                <div class="tab-pane active" id="designation">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-designation></app-designation>
+                    </div>
+                </div>
+                <div class="tab-pane" id="departments">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-departments></app-departments>
+                    </div>
+                </div>
+                <div class="tab-pane" id="staffinformation">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-staff-information></app-staff-information>
+                    </div>
+                </div>
+                <div class="tab-pane" id="personaldirectory">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-personal-directory></app-personal-directory>
+                    </div>
+                </div>
+                <div class="tab-pane" id="staffpresence">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-staff-presence></app-staff-presence>
+                    </div>
+                </div>
+                <div class="tab-pane" id="staffattendance">
+                    <div class="card two bg-white px-5 py-4 mb-3">
+                        <app-staff-attendance></app-staff-attendance>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

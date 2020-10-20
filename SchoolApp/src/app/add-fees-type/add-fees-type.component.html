@@ -1,0 +1,54 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h1>ADD FEES TYPE</h1>
+<form>
+    <!-- <div class="container"> -->
+        <div class="row">
+            <div class="form-group col-md-5">
+                <fieldset class="form-group">
+                    <label for="firstname" class="bmd-label-floating">NAME</label>
+                    <input type="text" #firstname class="form-control" id="firstname">
+
+                </fieldset>
+            </div>
+            <div class="form-group col-md-5">
+                <fieldset class="form-group">
+                    <label for="feesgroup" class="bmd-label-floating">FEES GROUP</label>
+                    <select type="text" #feesgroup class="form-control" required>
+                        <option *ngFor="let group of fgroup">{{group.Feesname}}</option>
+                    </select>
+
+                </fieldset>
+            </div>
+            <div class="form-group col-md-2">
+                <fieldset class="form-group">
+
+                    <input type="submit" (click)="myFunction(firstname,feesgroup)" class="btn btn-grad" value="SAVE">
+                    <button class="btn btn-grad" (click)=reverseFunction()>Reverse</button>
+                </fieldset>
+
+            </div>
+        </div>
+        <div class="table responsive">
+            <table class="table table-bordered">
+                <thead class="text-center thead-light">
+                    <tr>
+                        <th>NAME</th>
+                        <th>FEES GROUP</th>
+                        <th>PAYMENT DATE</th>
+                        <th>CREATEDAT</th>
+                        <th>CREATED BY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let sname of student" class="text-center">
+                        <td>{{sname.studentname}}</td>
+                        <td>{{sname.feesgroup}}</td>
+                        <td>{{sname.paymentdate | date: 'MMM-dd-yyyy'}}</td>
+                        <td>{{sname.CreatedAt}}</td>
+                        <td>{{sname.CreatedBy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <!-- </div> -->
+</form>

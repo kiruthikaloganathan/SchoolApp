@@ -1,0 +1,66 @@
+<p>manage-student works!</p>
+<div class="container">
+
+    <div class="row">
+        <div class="from-group col-md-2">
+            <div class="floating-form " style="margin-top:40px">
+                <div class="floating-label">
+                    <label>ACADEMIC YEAR</label>
+                    <select #aca class="form-control">
+                        <option *ngFor="let acad of academic">{{acad.AcademicName}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-2">
+            <label>SELECT CLASS</label>
+            <select #Class class="form-control">
+                <option *ngFor="let cla of selectclass">{{cla.Selectname}}</option>
+            </select>
+        </div>
+        <div class="forn-group col-md-2">
+            <label>SELECT SECTION</label>
+            <select #sec class="form-control">
+                <option *ngFor="let sect of section">{{sect.Sectionname}}</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label>SELECT BY NAME</label>
+            <input type="text" #name class="form-control">
+        </div>
+        <div class="form-group col-md-3">
+            <label>SEARCH BY ROLL NO</label>
+            <input type="text" #rollnum class="form-control">
+
+        </div>
+    </div>
+    <div class="row ">
+        <div class="form-group col-md-3">
+            <input type="button" (click)=myFunction(aca,Class,sec,name,rollnum) class="form-control" value="submit">
+        </div>
+    </div>
+    <div class="row my-4">
+
+        <div class="floating-form col-md-2 " >
+            <div class="floating-label">
+                <input class="floating-input" type="text" placeholder=" ">
+                <span class="highlight"></span>
+                <label>Text</label>
+            </div>
+        </div>
+
+        <div class="floating-form col-md-2">
+            <div class="floating-label">
+
+                <select #Class class="floating-input">
+                    <option *ngFor="let cla of selectclass">{{cla.Selectname}}</option>
+                </select>
+                <label>SELECT CLASS</label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

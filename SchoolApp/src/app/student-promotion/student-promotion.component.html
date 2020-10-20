@@ -1,0 +1,143 @@
+<div class="container">
+<!-- <h1>Student-Promotion Works!</h1> -->
+<form [formGroup]="StudentPromotion">
+    <h2>Personal Information</h2>
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label>Student Name</label>
+            <input type=text formControlName="stdname" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Registration Number</label>
+            <input type="number" formControlName="rgnumber" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Roll Number</label>
+            <input type="number" formControlName="rollnumber" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Date of Birth</label>
+            <input type="date" formControlName="dob" class="form-control">
+        </div>
+        <!-- <div class="form-group col-md-2">
+            <label>Current Class</label>
+            <select type="text" formControlName="Class" class="form-control">
+                <option *ngFor="let class of arr"[ngValue]="class.ClassName">{{class.ClassName}}</option>
+            </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label>Current Section</label>
+                <select type="text" formControlName="Section" class="form-control">
+                    <option *ngFor="let sect of section"[ngValue]="sect.SectionName">{{sect.SectionName}}</option>
+                </select>
+            </div> -->
+    </div>
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label>Father Name</label>
+            <input type="text" formControlName="fname" class="form-control">
+        </div>
+        <div class="from-group col-md-2">
+            <label>Phone Number</label>
+            <input type="tel" formControlForm="fpnumber" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Mother Name</label>
+            <input type="text" formControlName="mname" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>PhoneNumber</label>
+            <input type="tel" formControlName="mpnumber" class="form-control">
+        </div>
+    </div>
+    <!-- <div class="row">
+        <div class="form-group col-md-2">
+            <label>Exam Grade</label>
+            <input type="text" formControlName="egrade" class="form-control">
+        </div>
+    </div> -->
+    <h2>Promotion</h2>
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label>Current Class</label>
+            <select type="text" formControlName="Class" class="form-control">
+                <option *ngFor="let class of arr"[ngValue]="class.ClassName">{{class.ClassName}}</option>
+            </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label>Current Section</label>
+                <select type="text" formControlName="Section" class="form-control">
+                    <option *ngFor="let sect of section"[ngValue]="sect.SectionName">{{sect.SectionName}}</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label>Current Exam Grade</label>
+                <input type="text" formControlName="egrade" class="form-control">
+            </div>
+    </div>
+    <div class="row">
+            <div class="form-group col-md-2">
+                <label>promotion Class</label>
+                <select type="text" formControlName="Class" class="form-control">
+                    <option *ngFor="let class of arr"[ngValue]="class.ClassName">{{class.ClassName}}</option>
+                </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Promotion Section</label>
+                    <select type="text" formControlName="Section" class="form-control">
+                        <option *ngFor="let sect of section"[ngValue]="sect.SectionName">{{sect.SectionName}}</option>
+                    </select>
+                </div>
+                
+    </div>
+    <h2>School Information:</h2>
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label>Name of Institution</label>
+            <input type=text formControlName="schoolname" class="form-control">
+        </div>
+        <div class="form-group col-md-2">
+            <label>Address</label>
+            <input type="text" formControlName="address" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label>Head Signature</label>
+            <input type="text" formControlName="hsign" class="form-control">
+        </div>
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+</div>

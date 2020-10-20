@@ -1,0 +1,129 @@
+<p>admission works!</p>
+<body class="container fndfam">
+    <form [formGroup]="admission">
+        <div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label>Class</label>
+
+                    <select name="class" formControlName="Class" class="form-control" id="class">
+                        <option *ngFor="let kavi of arr" [ngValue]="kavi.ClassName">{{kavi.ClassName}}</option>
+
+                        <!-- <option value="year1">Year 1</option>
+                        <option value="year2">Year 2</option>
+                        <option value="year3">Year 3</option>
+                        <option value="year4">Year 4</option> -->
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+
+                    <label>Section</label>
+
+                    <select name="section" formControlName="Section" class="form-control" id="section">
+                        <option *ngFor="let sect of section" [ngValue]="sect.SectionName">{{sect.SectionName}}</option>
+                        <!-- <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option> -->
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="form-group col-md-3">
+
+                    <label>Section</label>
+
+                    <select name="section" formControlName="Section" class="form-control" id="section">
+                        <option *ngFor="let sect of section" [ngValue]="sect.SectionName">{{sect.SectionName}}</option>
+                        <!-- <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option> -->
+                    <!-- </select> -->
+                <!-- </div>  -->
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label>Subject</label>
+                    <select name="subject" formControlName="Subject" class="form-control" id="subject">
+                        <option *ngFor="let sub of subject" [ngValue]="sub.SubjectName">{{sub.SubjectName}}</option>
+                    </select>
+                </div>
+            </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Teacher</label>
+                            <select name="teacher" formControlName="Teacher1" class="form-control" id="teacher">
+                                <option *ngFor="let teach of teacher" [ngValue]="teach.TeacherName">{{teach.TeacherName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Sports</label>
+                            <select name="sports" formControlName="Sports1" class="form-control" id="sports">
+                            <option *ngFor="let sport of sports" [ngValue]="sport.SportsName">{{sport.SportsName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>BloodGroup</label>
+                            <select name="bloodgroup" formControlName="Bloodgroup" class="form-control" id="bloodgroup">
+                                <option *ngFor="let blood of bloodgroup" [ngValue]="blood.BloodgroupName">{{blood.BloodgroupName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Religion</label>
+                            <select name="religion" formControlName="Religion" class="form-control" id="religion">
+                                <option *ngFor="let relig of religion" [ngValue]="relig.ReligionName">{{relig.ReligionName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Nationality</label>
+                            <select name="nationality" formControlName="Nationality" class="form-control" id="nationality">
+                                <option *ngFor="let nation of nationality" [ngValue]="nation.NationalityName">{{nation.NationalityName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                    <table class=" table table-bordered ">
+                        <thead class="thead-light">
+                        <tr>
+                            <th>
+                                Studentid
+                            </th>
+                            <th>
+                                StudentName
+                            </th>
+                            <th>
+                                FatherName
+                            </th>
+                            <th>
+                                MotherName
+                            </th>
+                            <th>Student Age</th>
+                            <th>Contact Details</th>
+                            <th>Blood Group</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr *ngFor="let sname of student" class="text-center">
+                            <td>
+                                {{sname.Studentid}}
+                            </td>
+                            <td>{{sname.studentname}}</td>
+                            <td>{{sname.fathername}}</td>
+                            <td>{{sname.mothername}}</td>
+                            <td>{{sname.studentage}}</td>
+                            <td>{{sname.contactnumber}}</td>
+                            <td>{{sname.bloodgroup}}</td>
+                        </tr></tbody>
+                    </table></div>
+                
+            
+            </div>
+            </form>

@@ -1,0 +1,54 @@
+<link href="assets/fontawesome-free/css/t5.css" rel="stylesheet" type="text/css">
+<h1>Add Fees Group</h1>
+<form [formGroup]="AddFeesGroup">
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-4 offset-md-3">
+                <fieldset class="form-group">
+                    <label for="firstname" class="bmd-label-floating">NAME</label>
+                    <input type="text" formControlName="firstname" class="form-control">
+
+                </fieldset>
+            </div>
+            <div class="form-group col-md-4 offset-md-3">
+                <fieldset class="form-group">
+                    <label for="description" class="bmd-label-floating">HEAD</label>
+                    <input type="text" formControlName="description" class="form-control" id="description">
+
+                </fieldset>
+            </div>
+            <!-- <div class="from-group col-md-2 offset-md-5"> -->
+            <!-- <button routerLink="/feesdue" routerLinkActive="active">navigate</button> -->
+            <div class="form-group col-md-2">
+                <fieldset class="form-group">
+
+                    <input type="submit" (click)="myFunction()" class="btn btn-grad" value="SAVE">
+
+
+                </fieldset>
+            </div>
+        </div>
+        <div class="row-my-4">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light text-center">
+                        <tr>
+                            <th>StudentName</th>
+                            <th>Description</th>
+                            <th>CREATED AT</th>
+                            <th>CREATED BY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let snamee of student" class="text-center">
+                            <td>{{snamee.studentname}}</td>
+                            <td>{{snamee.studentdescription}}</td>
+                            <td>{{snamee.CreatedAt}}</td>
+                            <td>{{snamee.CreatedBy}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
